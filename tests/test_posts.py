@@ -18,14 +18,26 @@ class TestPostsAPI:
             assert key in data[0]
 
     def test_get_post_by_id(self):
-        response = APIClient.get_post_by_id(1)
+        
+        response = APIClient.get_post_by_id(4)
 
+        # Validate status code
         assert response.status_code == 200
+
+        # Convert response to JSON
         data = response.json()
 
-        assert data["id"] == 1
-        assert "title" in data
-        assert "body" in data
+        # Expected response
+        expected_response = {
+            "userId": 1,
+            "id": 4,
+            "title": "eum et est occaecati",
+            "body": "ullam et saepe reiciendis voluptatem adipisci\n"
+                    "sit amet autem assumenda provident rerum culpa\n"
+                    "quis hic commodi nesciunt rem tenetur doloremque ipsam iure\n"
+                    "quis sunt voluptatem rerum illo velit"
+        }
+        assert data == expected_response
 
     def test_create_post(self):
         payload = {
