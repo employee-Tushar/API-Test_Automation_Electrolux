@@ -27,7 +27,6 @@ class TestPostsAPI:
         # Convert response to JSON
         data = response.json()
 
-        # Expected response
         expected_response = {
             "userId": 1,
             "id": 4,
