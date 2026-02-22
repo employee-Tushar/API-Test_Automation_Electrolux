@@ -11,39 +11,21 @@ Language: Python
 
 ## Setup Instructions
 
-### 1️⃣ Clone the repository
+1. Clone the repository
 
-git clone <repo-url>
-cd api-tests
+git clone [<repo-url>](https://github.com/employee-Tushar/API-Test_Automation_Electrolux.git)
+cd API-Test_Automation_Electrolux
 
-### 2️⃣ Create virtual environment (Recommended)
+2. Create virtual environment (Recommended)
 
 python -m venv venv
 source venv/bin/activate   (Linux/Mac)
 venv\Scripts\activate      (Windows)
 
-### 3️⃣ Install dependencies
+3. Install dependencies
 
 pip install -r requirements.txt
 
-### 4️⃣ Run tests
+4. Run tests
 
 pytest
-
----
-
-## Test Coverage
-
-✔ Get all posts  
-✔ Get post by ID  
-✔ Create post  
-✔ Negative test for invalid post ID  
-
----
-
-## Design Approach
-
-- API client abstraction for maintainability
-- Configuration separated
-- Clear folder structure
-- Easy to scale with more endpoints
